@@ -7,6 +7,8 @@ services:
        # command: uvicorn api:app --host 0.0.0.0 --port 80
         ports:
         - "80:80"
+        volumes:
+            - ./dags:/app/dags
 
     postgres:
         image: postgres:9.6
